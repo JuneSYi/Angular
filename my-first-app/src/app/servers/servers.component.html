@@ -1,5 +1,14 @@
+<label>Server Name</label>
+<input type="text" 
+class="form-control" 
+(input)="onUpdateServerName($event)">
+<p>{{ serverName }}</p>
 <button 
 class="btn btn-primary"
-[disabled]="!allowNewServer">Add Server</button>
+[disabled]="!allowNewServer"
+(click)="onCreateServer()">Add Server</button>
+<!-- [disabled] is html property, disables the button. allowNewServer = False in beginning so !allowNewServer = True. 
+until 2000 seconds, as our setTimeOut() is set in the server.component.ts -->
+<p>{{ serverCreationStatus }}</p>
 <app-server></app-server>
 <app-server></app-server>

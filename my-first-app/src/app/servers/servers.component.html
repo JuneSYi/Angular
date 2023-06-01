@@ -1,8 +1,13 @@
 <label>Server Name</label>
-<input type="text" 
+<!-- <input 
+type="text" 
 class="form-control" 
-(input)="onUpdateServerName($event)">
-<p>{{ serverName }}</p>
+(input)="onUpdateServerName($event)"> -->
+<input
+type="text"
+class="form-control"
+[(ngModel)]="serverName">
+<!-- <p>{{ serverName }}</p> -->
 <button 
 class="btn btn-primary"
 [disabled]="!allowNewServer"
@@ -10,5 +15,16 @@ class="btn btn-primary"
 <!-- [disabled] is html property, disables the button. allowNewServer = False in beginning so !allowNewServer = True. 
 until 2000 seconds, as our setTimeOut() is set in the server.component.ts -->
 <p>{{ serverCreationStatus }}</p>
+
+<input
+type="text"
+class="form-control"
+[(ngModel)]="userName">
+<p>{{ userName }}</p>
+
+<button
+class="btn btn-primary"
+[disabled]="checkUserName()"
+(click)="onResetUserName()">Reset User</button>
 <app-server></app-server>
 <app-server></app-server>

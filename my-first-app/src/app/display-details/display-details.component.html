@@ -1,0 +1,7 @@
+<button 
+class="btn btn-primary"
+(click)="showParagraph()">Display Details</button>
+<p *ngIf="paragraphDisplay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis eaque sit perferendis distinctio est sunt velit quam dolor, modi aliquam ullam adipisci alias officiis debitis veniam eos quod nihil repellat.</p>
+<p *ngFor="let num of clicks; let i = index"
+[ngStyle]="{backgroundColor: i >= 4 ? 'blue' : 'transparent'}"
+[ngClass]="{fifth: count >= 5}">button click count currently is: {{num}}</p>

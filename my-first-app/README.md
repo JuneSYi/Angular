@@ -10,5 +10,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - Databinding
 - two-way databinding
 - property binding
-- events
+- events [(ngModel)]
 - Directives
+- *ngIf; else
+- *ngFor
+- ngClass
+- ngStyle
+- (click)
